@@ -1,0 +1,84 @@
+/* Base Container */
+.projects {
+  padding: 60px 20px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.projects h1 {
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  color: #6f00ff;
+}
+
+/* Grid Wrapper */
+.work-container {
+  display: flex;
+  justify-content: center;
+}
+
+.work-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  width: 100%;
+  max-width: 1300px;
+}
+
+/* Individual Project Card */
+.work-card div {
+  background-color: #1a1a1a;
+  border-radius: 16px;
+  padding: 20px;
+  transition: transform 0.4s, box-shadow 0.4s;
+  box-shadow: 0 0 10px #00f7ff55;
+  text-align: center;
+}
+
+.work-card div:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px #00f7ff88;
+}
+
+/* Image */
+.work-card img {
+  width: 100%;
+  max-height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 0 12px #00f7ff44;
+}
+
+/* Link */
+.work-card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #00f7ff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.work-card a:hover {
+  color: #fff;
+  text-shadow: 0 0 6px #00f7ff;
+}
+
+/* Responsive Layout */
+@media (max-width: 900px) {
+  .work-card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .work-card {
+    grid-template-columns: 1fr;
+  }
+
+  .projects h1 {
+    font-size: 2rem;
+  }
+}

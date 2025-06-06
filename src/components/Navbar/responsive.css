@@ -1,0 +1,113 @@
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 1024px) {
+  .home-container {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  .info {
+    width: 90%;
+  }
+
+  .mypic {
+    width: 300px;
+    height: 300px;
+  }
+
+  .nav a {
+    font-size: 1rem;
+  }
+
+  :root {
+    --h1-font: 3rem;
+    --h2-font: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .home {
+    padding: 1.5rem;
+    height: auto;
+  }
+
+  .home-container {
+    padding: 1.5rem;
+    gap: 2rem;
+  }
+
+  .info h1 {
+    font-size: 1.5rem;
+  }
+
+  .info h3 {
+    font-size: 1.2rem;
+  }
+
+  .info p {
+    font-size: 1rem;
+  }
+
+  button {
+    padding: 10px 24px;
+    font-size: 0.95rem;
+  }
+
+  .mypic {
+    width: 250px;
+    height: 250px;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .nav a {
+    margin: 10px 0;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .info h1 {
+    font-size: 1.3rem;
+  }
+
+  .info h3 {
+    font-size: 1rem;
+  }
+
+  .info p {
+    font-size: 0.95rem;
+  }
+
+  .mypic {
+    width: 200px;
+    height: 200px;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 8px 20px;
+  }
+
+  .social-media-icons a {
+    font-size: 1.2rem;
+    margin-right: 0.8rem;
+  }
+
+  :root {
+    --h1-font: 2rem;
+    --h2-font: 1.8rem;
+    --p-font: 0.9rem;
+  }
+}

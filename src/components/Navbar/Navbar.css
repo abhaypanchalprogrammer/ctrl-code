@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  max-width: 100%;
+  background-color: #1b1f25;
+  text-align: center;
+}
+:root {
+  --text-color: #fff;
+  --bg-color: #1b1f24;
+  --second-bg-color: #22282f;
+  --main-color: #13bbff;
+  --other-color: #c3cad5;
+
+  --h1-font: 4.5rem;
+  --h2-font: 2.9rem;
+  --p-font: 1rem;
+}
+.nav-container {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  background: transparent;
+  transition: all 0.5s ease;
+  animation: fade 1s ease-in;
+}
+
+.logo {
+  font-size: 20px;
+  color: var(--text-color);
+  font-weight: 600;
+}
+.logo span {
+  color: var(--main-color);
+}
+.nav {
+  display: flex;
+  align-items: center;
+}
+.nav a {
+  color: #e0e0ff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--other-color);
+  margin-left: 40px;
+  border: 2px solid transparent;
+  padding: 5px;
+  transition: all 0.5s ease;
+}
+.nav a:hover {
+  color: #a259ff;
+  border-bottom: 2px solid var(--other-color);
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    height: auto;
+    gap: 10px;
+  }
+
+  .logo {
+    text-align: center;
+  }
+
+  .logo h1 {
+    font-size: 2rem;
+  }
+
+  .nav {
+    display: flex !important; /* Ensure flex stays active */
+    flex-direction: row !important; /* Force row layout */
+    flex-wrap: wrap; /* Wrap to next line if needed */
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    width: 100%;
+    border-bottom: 3px solid #a259ff;
+  }
+
+  .nav a {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+    color: var(--other-color);
+    text-decoration: none;
+    transition: 0.3s ease;
+    border-bottom: 2px solid transparent;
+  }
+
+  .nav a:hover {
+    color: #a259ff;
+    border-bottom: 2px solid var(--other-color);
+  }
+}

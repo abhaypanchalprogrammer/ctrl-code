@@ -1,0 +1,136 @@
+.skills-container {
+  padding: 40px 20px;
+
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.skills-container h1 {
+  margin-bottom: 40px;
+  color: #6f00ff;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 👈 4 cards per row */
+  gap: 100px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.skill-card {
+  border-radius: 16px;
+  perspective: 1000px;
+  position: relative;
+  cursor: pointer;
+  height: 160px;
+  transition: transform 0.4s ease;
+}
+
+.skill-inner {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+  position: relative;
+}
+
+.skill-card:hover .skill-inner {
+  transform: rotateY(180deg);
+}
+
+.skill-front,
+.skill-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 20px;
+  box-shadow: 0 0 10px #9748ff;
+  text-align: center;
+  flex-direction: column;
+  transition: all 0.4s ease;
+}
+
+.skill-front {
+  background: linear-gradient(135deg, #0ff2, #00f7ff33);
+  border: 2px solid #9748ff;
+  color: #ffffff;
+}
+
+.skill-back {
+  background: #9748ff;
+  color: #0d0d0d;
+  transform: rotateY(180deg);
+  font-size: 1.5rem;
+  box-shadow: inset 0 0 10px #00f7ff99;
+}
+
+.badge {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.75rem;
+  background: #ff3e6b;
+  padding: 4px 10px;
+  border-radius: 12px;
+  color: white;
+  box-shadow: 0 0 8px #ff3e6b;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 8px #ff3e6b;
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 16px #ff3e6b;
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 8px #ff3e6b;
+  }
+}
+
+/* 🔄 Responsive Design */
+
+@media (max-width: 1024px) {
+  .skill-grid {
+    grid-template-columns: repeat(
+      3,
+      1fr
+    ); /* 3 cards per row on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .skill-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .skill-grid {
+    grid-template-columns: 1fr; /* 1 card per row on phones */
+  }
+
+  .skills-container h1 {
+    font-size: 2rem;
+  }
+
+  .skill-card {
+    height: 140px;
+  }
+}
