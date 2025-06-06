@@ -1,5 +1,5 @@
 import React from "react";
-import "./SkillS.css";
+import "./Skills.css";
 
 const skills = [
   { name: "HTML5", level: "100%" },
