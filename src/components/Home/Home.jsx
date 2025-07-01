@@ -58,7 +58,7 @@ const Home = () => {
           <button
             onClick={() => {
               window.open(
-                "https://abhaypanchalprogrammer.github.io/Personal-Portfolio/assets/CV-FINAL.pdf"
+                "https://abhaypanchalprogrammer.github.io/Personal-Portfolio/assets/Resumee.pdf"
               );
             }}
           >
