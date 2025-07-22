@@ -18,7 +18,7 @@ const Home = () => {
 
   useEffect(() => {
     const currentTitle = titles[titleIndex];
-    let typeSpeed = !deleting ? 120 : 50;
+    let typeSpeed = !deleting ? 150 : 100;
 
     const timeout = setTimeout(() => {
       if (!deleting) {
@@ -27,7 +27,7 @@ const Home = () => {
 
         if (charIndex + 1 === currentTitle.length) {
           setDeleting(true);
-          typeSpeed = 50;
+          typeSpeed = 100;
         }
       } else {
         setText(currentTitle.substring(0, charIndex - 1));
