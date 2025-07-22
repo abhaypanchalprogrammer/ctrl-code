@@ -62,7 +62,7 @@ const Home = () => {
               );
             }}
           >
-            Download CV
+            RESUME
           </button>
           <div className="social-media-icons">
             <a
