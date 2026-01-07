@@ -7,9 +7,7 @@ import "./media.css";
 const Home = () => {
   const titles = [
     "Frontend Developer",
-    "MERN Stack Developer ",
-    "Freelancer",
-    "Creator",
+    
   ];
   const [text, setText] = useState("");
   const [titleIndex, setTitleIndex] = useState(0);
